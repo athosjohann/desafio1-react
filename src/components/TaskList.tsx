@@ -39,17 +39,6 @@ export function TaskList() {
     setTasks(complete)
   }
 
-  function handleToggleTaskIncomplete(id: number) {
-    const incomplete = tasks.map(tasks => tasks.id == id ?
-      {
-        ...tasks,
-        isComplete: false
-      }
-      : tasks)
-
-    setTasks(incomplete)
-  }
-
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
     const filtrado = tasks.filter(tasks => tasks.id !== id)
